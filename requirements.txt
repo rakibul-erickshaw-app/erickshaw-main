@@ -1,4 +1,1 @@
-st-gsheets-connection
-streamlit
-pandas
-streamlit
+​st-gsheets-connection
