@@ -1,12 +1,11 @@
-
-Import streamlit as st
+import streamlit as st
 import pandas as pd
 from streamlit_gsheets import GSheetsConnection
 
 # ১. গুগল শিট কানেকশন
 conn = st.connection("gsheets", type=GSheetsConnection)
 
-# ২. ভাষা পরিবর্তনের মেনু (এখানে আপনি আরও ভাষা যোগ করতে পারেন)
+# ২. ভাষা পরিবর্তনের মেনু 
 languages = {
     "English": {"title": "E-Rickshaw Registration", "name": "Driver Name", "phone": "Phone Number", "btn": "Register", "success": "Registered successfully!"},
     "বাংলা": {"title": "ই-রিকশা রেজিস্ট্রেশন", "name": "চালকের নাম", "phone": "ফোন নম্বর", "btn": "রেজিস্ট্রেশন করুন", "success": "সফলভাবে রেজিস্ট্রেশন হয়েছে!"},
@@ -18,7 +17,7 @@ languages = {
 selected_lang = st.sidebar.selectbox("Choose Language / ভাষা নির্বাচন করুন", list(languages.keys()))
 text = languages[selected_lang]
 
-# ৩. অ্যাপ ইন্টারফেস (ইউজারের ভাষা অনুযায়ী পরিবর্তন হবে)
+# ৩. অ্যাপ ইন্টারফেস 
 st.title(text["title"])
 st.write("Please fill the form / অনুগ্রহ করে ফর্মটি পূরণ করুন।")
 
