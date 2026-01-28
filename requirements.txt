@@ -1,1 +1,3 @@
-​st-gsheets-connection
+streamlit
+pandas
+st-gsheets-connection
